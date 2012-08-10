@@ -4,7 +4,7 @@ module OmniAuth
   module Strategies
     class Appnet < OmniAuth::Strategies::OAuth2
 
-      option :name, 'buffer'
+      option :name, 'appnet'
 
       option :client_options, {
         :site => 'https://alpha-api.app.net',
