@@ -14,8 +14,19 @@ module OmniAuth
 
       uid { raw_info['id'] }
 
+      info do
+        {
+          :nickname => raw_info['username'],
+          :name => raw_info['name'],
+          :image => raw_info['avatar_image']['url'],
+          :description => raw_info['description']['text'],
+          :type => raw_info['type'],
+          :counts => raw_info['counts']
+        }
+      end
+
       extra do
-        {:raw_info => raw_info}
+        { :raw_info => raw_info }
       end
 
       def raw_info
