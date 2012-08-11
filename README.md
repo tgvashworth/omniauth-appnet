@@ -1,6 +1,6 @@
-# Omniauth::Appnet
+# OmniAuth::Appnet
 
-TODO: Write a gem description
+An OmniAuth Strategy for App.net.
 
 ## Installation
 
@@ -27,5 +27,14 @@ require 'omniauth-appnet'
 use Rack::Session::Cookie
 use OmniAuth::Builder do
   provider :appnet, 'YOUR_CLIENT_ID', 'YOUR_CLIENT_SECRET'
+end
+
+get '/auth/:provider/callback' do
+  # Do something with auth_hash
+  redirect to('/')
+end
+
+def auth_hash
+  request.env['omniauth.auth']
 end
 ```
