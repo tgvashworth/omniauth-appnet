@@ -4,9 +4,9 @@ require File.expand_path('../lib/omniauth-appnet/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Tom Ashworth"]
   gem.email         = ["tom@phuu.net"]
-  gem.description   = "Omniauth Stratey for App.net"
-  gem.summary       = "Omniauth Stratey for App.net"
-  gem.homepage      = ""
+  gem.description   = "Omniauth Strategy for App.net"
+  gem.summary       = "Omniauth Strategy for App.net"
+  gem.homepage      = "https://github.com/phuu/omniauth-appnet"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
