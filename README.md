@@ -18,12 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Sinatra
 
-## Contributing
+```ruby
+require 'omniauth'
+require 'omniauth-appnet'
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+use Rack::Session::Cookie
+use OmniAuth::Builder do
+  provider :appnet, 'YOUR_CLIENT_ID', 'YOUR_CLIENT_SECRET'
+end
+```
